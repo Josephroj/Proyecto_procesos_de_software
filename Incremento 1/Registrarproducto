@@ -1,0 +1,19 @@
+public function getRegistrarproducto()
+	{
+		$marca=Marca::all()->lists("nombremarca","idmarca");
+		$categoria=Categoria::all()->lists("nombre","idcategoria");
+
+		return View::make("MantenimientoDeTablas.frmregistrarproducto")->with("marca",$marca)->with("categoria",$categoria);
+
+	}
+
+class Producto extends Eloquent
+{
+	protected $table = 'productos';
+	protected $primaryKey="id";
+
+		public function Marca()
+	{
+		return $this->belongsTo("Marca","idmarca");
+	}
+}
