@@ -1,0 +1,37 @@
+-- Estructura de tabla para la tabla `productos`
+--
+
+CREATE TABLE `productos` (
+  `id` int(11) NOT NULL,
+  `idcategoria` int(11) NOT NULL,
+  `idmarca` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `ruta_imagen` varchar(100) NOT NULL,
+  `color` varchar(20) NOT NULL,
+  `preciounitario` decimal(10,0) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `descripcion` varchar(512) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `idcategoria`, `idmarca`, `nombre`, `ruta_imagen`, `color`, `preciounitario`, `stock`, `descripcion`, `created_at`, `updated_at`) VALUES
+(155, 1, 1, 'BOTAS DAMAS', '/img-producto/user_image_155.jpg', 'negro', '180', 17, 'BOTAS DAMAS', '2017-10-21 03:42:48', '2017-10-21 08:42:48'),
+(156, 1, 1, 'BOTAS DAMAS', '/img-producto/user_image_156.jpg', 'MARRÓN', '190', 46, 'BOTAS DAMAS', '2017-10-21 04:06:53', '2017-10-21 09:06:53'),
+(157, 2, 10, 'BOTAS CABALLEROS', '/img-producto/user_image_157.jpg', 'CANELA', '220', 47, 'BOTAS CABALLEROS', '2017-10-21 13:34:25', '2017-10-21 18:34:25'),
+(158, 2, 16, 'BOTAS CABALLEROS', '/img-producto/user_image_158.jpg', 'MARRÓN', '230', 49, 'BOTAS CABALLEROS', '2017-10-20 20:14:29', '2017-10-21 01:14:29'),
+(159, 3, 1, 'ZAPATOS CABALLEROS', '/img-producto/user_image_159.jpg', 'NEGRO', '180', 58, 'ZAPATOS CABALLEROS', '2017-10-21 04:18:52', '2017-10-21 09:18:52'),
+(160, 3, 1, 'ZAPATOS CABALLEROS', '/img-producto/user_image_160.jpg', 'NEGRO', '150', 43, 'ZAPATOS CABALLEROS', '2017-10-21 15:29:19', '2017-10-21 20:29:19'),
+(161, 4, 4, 'ZAPATOS DAMAS', '/img-producto/user_image_161.jpg', 'MARRÓN', '189', 60, 'ZAPATOS DAMAS', '2017-10-20 19:56:45', '2017-10-21 00:56:45'),
+(162, 4, 3, 'ZAPATOS DAMAS', '/img-producto/user_image_162.jpg', 'MARRÓN', '230', 60, 'ZAPATOS DAMAS', '2017-10-20 19:57:34', '2017-10-21 00:57:34'),
+(163, 5, 18, 'TACOS DAMAS', '/img-producto/user_image_163.jpg', 'MARRÓN', '200', 60, 'TACOS DAMAS', '2017-10-20 19:58:19', '2017-10-21 00:58:19'),
+(164, 5, 19, 'TACOS DAMAS', '/img-producto/user_image_164.jpg', 'NEGRO', '190', 36, 'TACOS DAMAS', '2017-10-21 04:06:53', '2017-10-21 09:06:53'),
+(165, 6, 24, 'SANDALIAS CABALLEROS', '/img-producto/user_image_165.jpg', 'MARRÓN', '190', 45, 'SANDALIAS CABALLEROS', '2017-10-21 13:22:17', '2017-10-21 18:22:17'),
+(166, 6, 1, 'SANDALIAS CABALLEROS', '/img-producto/user_image_166.jpg', 'NEGRO', '70', 75, 'SANDALIAS CABALLEROS', '2017-10-21 13:34:25', '2017-10-21 18:34:25'),
+(167, 2, 4, 'BOTAS CABALLEROSS', '/img-producto/user_image_167.jpg', 'NEGRO', '198', 10, 'BOTAS CABALLEROSS negro', '2017-10-21 15:14:17', '2017-10-21 20:14:17');
+
+-- --------------------------------------------------------
